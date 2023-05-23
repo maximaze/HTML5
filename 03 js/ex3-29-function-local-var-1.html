@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 범위</title>
+    <script>
+        // 함수의 전역변수 : 함수의 밖에 선언
+        var sum1 = 10;
+
+        document.write('전역:',sum1,'<br>')     // 10
+
+        function add1() { // 함수 안에서 전역 변수 참조 가능
+            sum1 = 20; // 전역변수의 값을 20으로 바꿈
+        }
+        
+        add1();
+
+        document.write('전역:' + sum1, '<br>');  // 20      
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 생성</title>
+    <script>      
+        // 객체 생성자 함수
+        function Triangle(b, h) {
+            this.base = b;          // 프로퍼티 생성
+            this.height = h;        // 프로퍼티 생성
+            this.area = function() {// 객체에 종속된 익명함수
+              // return  b * h / 2; 
+              return this.base * this.hight / 2
+            };
+
+            return this;
+        }
+
+        // new를 하지 않아도 객체 속성에 접근할 수 있다.
+        // 객체 속성이 만들어 지지 않음
+        // Uncaght TypeError : Cannot read properties of undefined (reading 'base')
+        var triangle1 = Triangle(15, 15);
+        console.log(triangle1);
+        console.log(triangle1.base);
+        console.log(triangle1.height);
+        console.log(triangle1.area());  
+    </script>
+</head>
+<body>
+</body>
+</html>

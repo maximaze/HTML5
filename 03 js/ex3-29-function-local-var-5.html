@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 범위</title>
+    <script>
+        /*
+         * const : 동일한 변수를 중복선언 할 수 없다.
+         * 블록안에서 const?
+         *      - 전역변수로 동일한 변수가 있어도
+         *      - 블록 안에서는 새로운 지역변수로 처리
+        */
+        
+        const num2 = 70;
+
+        if(num2 === 70) {
+            const num2 = 80; // 블록안에서 let은 지역변수로 처리
+            document.write('지역(num2): ', num2, '<br>'); // 80
+        }
+
+        document.write('전역(num2): ', num2,'<br>');  // 70
+    </script>
+</head>
+<body>
+</body>
+</html>

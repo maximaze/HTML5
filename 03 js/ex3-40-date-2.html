@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Date 객체</title>
+    <script>
+        // 월 : 0~11까지
+        var dateObj = new Date();           // 현재 일시
+        var dateInfo = {
+            year: dateObj.getFullYear(),
+            month: dateObj.getMonth() + 1,  // 월:0~11
+            date: dateObj.getDate(),        // 일:1~31
+            hours: dateObj.getHours(),      // 시:0~23
+            minutes: dateObj.getMinutes(),  // 분:0~59
+            seconds: dateObj.getSeconds,    // 초:0~59
+            nowDate : dateObj.toUTCString()
+        }
+        for(var i in dateInfo) {
+            console.log(i + ':' + dateInfo[i]);
+        }        
+    </script>
+</head>
+<body>
+</body>
+</html>

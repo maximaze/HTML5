@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 범위</title>
+    <script>       
+        var sum2 = 30; // 전역변수
+
+        function add2() {
+            document.write('전역:', sum2, '<br>'); // undefined
+            var sum2 = 40; // var로 선언을 하게 되면 지역변수
+            document.write('지역:', sum2, '<br>');
+        }
+
+        add2();
+
+        document.write('전역:', sum2, '<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

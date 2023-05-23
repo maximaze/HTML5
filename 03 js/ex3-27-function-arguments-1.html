@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수</title>
+    <script>
+        function examPass() { // 매개변수의 개수가 정해지지 않은 함수
+            document.write('[examPass] arguments.length = ', arguments.length,"<br>");
+            for(var x = 0; x < arguments.length; x++) {
+                document.write(`arguments[${x}] -> ${arguments[x]} <br>`);
+            }
+
+            name = arguments[0];
+            h = arguments[1];
+            c = arguments[2];
+            j = arguments[3];
+
+            var comment = name + ' 학생은 ';
+            if (h >= 60 && c >= 60 && j >= 60) {
+                comment += '전과목 PASS';
+            } else {
+                if (h < 60) {
+                    comment += 'html 재시험, ';
+                }
+                if (c < 60) {
+                    comment += 'css 재시험, ';
+                }
+                if (j < 60) {
+                    comment += 'javascript 재시험';
+                }
+            }
+            return comment;
+        }
+    </script>
+</head>
+<body>
+    <h1>매개변수의 개수가 정해지지 않은 함수</h1>
+    <h3>arguments 객체</h3>
+    <script>
+        document.write(examPass('이함수: ', 80, 90, 70),'<br>');
+        document.write(examPass('저변수: ', 80, 50, 50),'<br>');
+    </script>
+</body>
+</html>

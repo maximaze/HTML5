@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클로져</title>
+    <script>
+        function tagger(tag) {
+            return function(content){
+                result = `<${tag}>${content}</${tag}>`;
+                return result;
+            }
+        }
+        
+        h1 = tagger('h1');
+        h2 = tagger('h2');
+        p = tagger('p');
+
+    </script>
+</head>
+<body>
+    <h1>클로져(closure) : 함수 안에 함수</h1>
+    <script>
+        document.write(h1("환영합니다"));
+        document.write(h2("반갑습니다"));
+        document.write(p("마음껏 즐거운 시간을 보내세요."));
+    </script>
+</body>
+</html>

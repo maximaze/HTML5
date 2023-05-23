@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>for in 문</title>
+    <script>
+        var info = {
+            subject: 'javascript',
+            credit: 3,
+            days: 20,
+            tuition: 10000
+        };
+
+        // 객체의 저장되어 있는 아이템 만큼 인덱스를 반복해서 획득
+        for(var p in info) {
+            console.log(p + ' : ' + info[p]);
+        }
+
+        document.write('subject: ',info['subject'],'<br>');
+        document.write('credit: ',info['credit'],'<br>');
+        document.write('days: ',info['days'],'<br>');
+        document.write('tuition: ',info['tuition'],'<br>');
+        document.write('----------------------------------------------------');
+        document.write('subject: ',info.subject,'<br>');
+        document.write('credit: ',info.credit,'<br>');
+        document.write('days: ',info.days,'<br>');
+        document.write('tuition: ',info.tuition,'<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

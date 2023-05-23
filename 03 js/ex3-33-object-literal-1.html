@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 생성</title>
+    <script>
+        // 객체 리터럴
+        var circle = {
+            color : 'yellow',               // 색상
+            diameter : 100,                 // 지름
+            radius : function() {           // 반지름
+                return this.diameter / 2;      
+            }
+        };
+
+        console.log(circle.color);
+        console.log(circle.diameter);
+        console.log(circle.radius());
+                
+    </script>
+</head>
+<body>
+</body>
+</html>

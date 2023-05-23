@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 버블링 방지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #outer {
+            background: #ff0000;
+            padding: 20px;
+        }
+        #inner {
+            background: #00ff00;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var a = document.getElementById('outer');
+            var b = document.getElementById('inner');
+            outer.onclick = function() {
+                alert('부모 이벤트');
+            };
+            inner.onclick = function(event) {
+                alert('자식 이벤트');
+                // 이벤트 버블링을 막음 : 이벤트 전파를 막음
+                event.stopPropagation();
+            };
+
+            var naver = document.getElementById("naver");
+            naver.onclick = function(){
+                alert("네이버")
+                // HTML 요소가 가지고 있는 기본 이벤트의 실행을 막음
+                // 사이트로 이동하지 않음
+                event.preventDefault();
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <p id="inner">클릭</p>
+    </div>
+    <div>
+        <a id="naver" href="https://naver.com">네이버</a>
+    </div>
+</body>
+</html>

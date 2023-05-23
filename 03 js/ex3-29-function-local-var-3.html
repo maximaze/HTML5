@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 범위</title>
+    <script>
+        /*
+         * var 반복해서 변수를 재선언 가능하므로
+         * 블록안에서 전역변수를 var로 재선언하면 값이 바뀜
+        */
+        var num1 = 50;
+        var num2 = 99;
+
+        if(num1 === 50) { // 블록의 지역변수는 존재하지 않는다.
+            var num1 = 60; // 전역분수의 재선언
+        }
+
+        var num2 = 100;
+
+        document.write('전역: ', num1,'<br>');  // 60
+        document.write('전역: ', num2,'<br>');  // 100
+
+    </script>
+</head>
+<body>
+</body>
+</html>

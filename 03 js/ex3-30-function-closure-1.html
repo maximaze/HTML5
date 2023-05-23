@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클로져</title>
+    <script>
+        /*
+         * 클로져(closure) : 함수 안에 함수
+        */
+        function multiply(n) {
+            document.write(`multiply(${n})`, '<br>');
+            return function(){ // 내부함수이면서 익명함수
+                return n *= n; // n = n * n
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>클로져(closure) : 함수 안에 함수</h1>
+    <script>
+        var num1 = multiply(10);
+        document.write(num1(),'<br>'); // 10 * 10 = 100
+        document.write(num1(),'<br>'); // 100 * 100 = 10000 >> 위에 값이 누적되서 곱셈
+
+        var num2 = multiply(20);
+        document.write(num2(),'<br>'); // 20 * 20 = 400
+        document.write(num2(),'<br>'); // 400 * 400 = 160000 >> 위에 값이 누적되서 곱셈
+    </script>
+</body>
+</html>

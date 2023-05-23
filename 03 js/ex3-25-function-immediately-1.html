@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>즉시 실행 함수</title>
+    <script>
+        (function() { // 정의와 선언이 동시에 처리, 재실행 불가
+            iife();           
+        })();
+        function iife() {
+            console.log('즉시 실행 함수1');
+            document.write('즉시 실행 함수1', '<br>')
+        }        
+        /*
+         * 즉시실행함수는 익명함수처럼 변수에 할당이 되지 않음
+         * instant : undefined
+         */
+        var instant = (function() {
+            console.log('즉시 실행 함수2');
+            document.write('즉시 실행 함수2', '<br>')
+        })();        
+    </script>
+</head>
+<body>
+    <h1>즉시 실행 함수</h1>
+    <script>
+        document.write("instant=",instant);
+        // Uncaught TypeError : instant is not a function
+        // instant();
+    </script>
+</body>
+</html>

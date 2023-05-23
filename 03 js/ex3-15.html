@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>if 문</title>
+    <script>
+        var age = prompt('나이입력',''); // ''는 작은따옴표 두 개 입니다.
+        var admissionFee = '';
+        if (age < 13 || age >= 65) { // 청소년, 경로우대
+            admissionFee = '2,000원';
+        } else if (age >= 13 && age < 20) { // 청소년
+            admissionFee = '4,000원';
+        } else {                      // age > 19 && age < 65
+            admissionFee = '6,000원'; // 성인
+        }
+        document.write(admissionFee); 
+    </script>
+</head>
+<body>
+</body>
+</html>

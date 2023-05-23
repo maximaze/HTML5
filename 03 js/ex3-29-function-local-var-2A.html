@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 범위</title>
+    <script>       
+        var sum2 = 30; // 전역변수
+
+        /*
+         * 함수 안에서 전역변수와 같은 이름으로 var에 의해 변수를 선언하면
+         * 해당 변수는 지역변수로 처리한다,
+         * 그래서 var sum2로 선언하기 전에 사용하면 undefined가 된다.
+        */
+
+        function add2() {            
+            document.write('전역:', sum2, '<br>'); // undefined
+            var sum2 = sum2 + 40; // NaN
+            document.write('지역:', sum2, '<br>');
+        }
+
+        add2();
+
+        documet.write('전역:', sum2, '<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>

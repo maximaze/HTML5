@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>재귀함수</title>
+	<script>
+		function factorial(n){ // 10, 9, 8, ... 1
+			if(n === 1){ 
+				document.write('호출 끝','<br>');
+				return n;
+			} 
+			else{
+				document.write('호출' , n,'<br>');
+				return n * factorial(n-1);
+			}
+			
+		}
+		// factorial(10);
+	</script>
+</head>
+<body>	
+	<h1>재귀함수</h1>
+	<p>자기 자신을 호출하는 함수</p>
+	<script>
+		n = 10;
+		result = factorial(10);
+		document.write(`factorial(${n}) -> ${result}`);
+	</script>
+</body>
+</html>

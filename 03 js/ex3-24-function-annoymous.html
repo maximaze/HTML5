@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>익명 함수</title>
+    <script>
+        // Uncautht TypeError : compute is not a function
+        // compute라는 변수가 없기 때문에 에러가 발생(할당되기 전)
+        // omcpute();
+        var compute = function() { // 함수 이름 없이 정의를 ㅂ변수에 할당
+            var x = 0.5;
+            var y = 10;
+            var result = x * y;
+            console.log(result);
+            document.write('result = ',result);
+        };
+        // compute();
+    </script>
+</head>
+<body>
+    <h1>익명 함수 - anonymous function</h1>
+    <h3>이름이 없는 함수</h3>
+    <p>변수에 함수를 할당하여 변수를 통해서 함수를 호출</p>
+    <script>
+        compute();
+    </script>
+</body>
+</html>

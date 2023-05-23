@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수</title>
+    <script>
+        var num = 10;
+        var num = 20; // 재선언 가능, 최정선언 유효
+        document.write(num,'<br>');
+        
+        var vx = 10
+        document.write(vx, '<br>');
+        var vx = "abc" // 재선언 타입 변경 가능
+        document.write(vx, '<br>');
+
+        // 변수명 : 영문자나 특수문자(_, $) 시작
+        var _ud = 99
+        var $dr = 100
+        document.write("_ud: ", _ud, '<br>');
+        document.write("$dr: ", $dr, '<br>');
+
+        // 대소문자 구분
+        var Abc = "ABC"
+        var abc = "abc"
+        document.write("ABC: ", Abc, '<br>');
+        document.write("abc: ", abc, '<br>');
+
+    </script>
+</head>
+<body>
+</body>
+</html>
