@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form 객체의 선택 방법</title>
+    <script>
+        window.onload = function() {
+            var frm1 = document.frm1;
+            var frm2 = document.frm2;
+            console.log(frm1.search.placeholder);   // 검색어입력
+            console.log("frm1.elements.search.placeholder:", frm1.elements.search.placeholder) // 검색어입력
+            console.log(frm2.subject.placeholder);  // 과목입력
+            console.log(frm2.credit.placeholder);   // 학점입력
+            console.log(document.forms[0].elements[0].placeholder); // 검색어입력
+            console.log(document.forms[1][1].placeholder); // 학점 입력
+            console.log(document.forms['frm1'].elements['search'].placeholder); // 검색어입력
+            console.log(document.forms['frm2']['subject'].placeholder); // 과목입력
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="frm1"> <!-- [0][0]번째 -->
+        <input type="search" name="search" placeholder="검색어입력"> <!-- [0][1]번째 -->
+        <input type="submit" value="확인">
+    </form>
+    <form action="#" name="frm2"> <!-- [1][0]번째 -->
+        <input type="text" name="subject" placeholder="과목입력"> <!-- [1][1]번째 -->
+        <input type="password" name="credit" placeholder="학점입력">
+        <input type="submit" value="확인">
+    </form>
+</body>
+</html>

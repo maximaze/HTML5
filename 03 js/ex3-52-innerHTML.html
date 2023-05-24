@@ -19,12 +19,17 @@
     <script>
         function createEle() {
             var content = document.getElementById('content');
+            console.log("content.innerHTML:", content.innerHTML)
+            console.log("content.innerText:", content.innerText)
             content.innerHTML = '<p class="m1">자바스크립트</p>';
         }
         addEventListener('load', createEle);
     </script>
 </head>
 <body>    
-    <div id="content"></div>
+    <div id="content">
+        안녕하세요
+        <p>반갑습니다</p>
+    </div>
 </body>
 </html>

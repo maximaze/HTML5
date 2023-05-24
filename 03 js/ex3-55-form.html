@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>로그인 체크</title>
     <script>
-        window.onload = function() {
-            var login = document.login;
+        window.onload = function() { // form
+            var login = document.login; // submit 버튼이 클릭되면 실행
             login.onsubmit = function() {
                 if(!login.id.value){
                     alert('아이디를 입력해주세요!');

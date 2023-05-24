@@ -6,7 +6,7 @@
     <script>
         window.onload = function() {
             var frm = document.frm;
-            var date = new Date();
+            var date = new Date(); // 현재 일시
             var year = date.getFullYear();            
             for (var i = 1970; i <= year; i++) {
                 frm.y.add(new Option(i, i));
@@ -14,7 +14,16 @@
             for (var i = 1; i <= 12; i++) {
                 frm.m.add(new Option(i, i));
             }
-            frm.sub.length = 3;
+            // const sub = document.frm.sub;
+            const sub = document.getElementById("sub");
+            const sub_option = ['과목선택', 'HTML', 'CSS', 'JavaScript'];
+            sub_option.forEach((element, key) => {
+                sub[key] = new Option(element, key);
+            });
+            sub.selectedIndex = 2;
+            console.log("sub:", sub.options[sub.selectedIndex].value); // 2
+            console.log("sub:", sub.options[sub.selectedIndex].text); // 'CSS'
+            // sub.length = 4; // 'JavaScript'
         }
     </script>
 </head>
@@ -26,11 +35,7 @@
         <select name="m">
             <option value="#">월 선택</option>            
         </select>
-        <select name="sub">
-            <option value="#">과목선택</option>
-            <option value="#">html</option> 
-            <option value="#">css</option>
-            <option value="#">javascript</option>              
+        <select name="sub" id="sub">          
         </select>
     </form>
 </body>
